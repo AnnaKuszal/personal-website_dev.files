@@ -1,0 +1,71 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding: 15px 5% 50px;
+
+  .title {
+    color: $font-dark;
+    background-color: $font-color-second;
+  }
+
+  .elementsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .element {
+    padding: 0 15px 15px;
+    width: 40%;
+    flex: 1 1 auto;
+    border-radius: 5px;
+    box-shadow: $box-shadow-second;
+    overflow: hidden;
+
+    &:first-child {
+      flex: 1 1 100%;
+    }
+
+    .subtitle {
+      color: $font-color-second;
+    }
+
+    .list {
+      list-style-type: none;
+      padding: 0;
+
+      .listItem {
+        font-style: italic;
+
+        padding-left: 30px;
+        text-indent: -2.5rem;
+      }
+
+      .iconMark {
+        color: $font-color-second;
+        margin-right: 10px;
+      }
+    }
+
+    .link {
+      color: $font-color-link-primary
+    }
+
+    .link:hover {
+      color: $font-color-first;
+    }
+
+    .link:active {
+      color: $font-color-link;
+    }
+  }
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 350px) and (max-width: 700px) {
+  .root .element {
+    flex: 0 1 100%;
+  }
+}
