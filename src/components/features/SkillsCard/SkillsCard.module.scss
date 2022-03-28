@@ -1,0 +1,40 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding: 0 15px 15px;
+  width: 230px;
+  flex: 1 1 auto; 
+  border-radius: 5px;
+  box-shadow: $box-shadow-first;
+  overflow: hidden;
+
+  .subtitle {
+    color: $font-color-first;
+  }
+
+  .list {
+    list-style-type: none;
+    padding: 0;
+
+    .listItem {
+      padding-left: 30px;
+      font-style: italic;
+      text-indent: -2.5rem;
+    }
+
+    .iconMark {
+      color: $font-color-first;
+      margin-right: 10px;
+    }
+  }
+
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 340px) and (max-width: 600px) {
+  .root {
+    flex: 0 1 100%;
+  }
+}
