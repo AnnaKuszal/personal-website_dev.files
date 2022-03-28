@@ -1,0 +1,59 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding: 15px 5% 50px;
+
+  .title {
+    color: $font-dark;
+    background-color: $font-color-first;
+  }
+
+  .elementsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1s ease, opacity 2s ease 0.5s;
+
+    &.visible {
+      max-height: 350px;
+      overflow: visible;
+      opacity: 1;
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 340px) and (max-width: 700px) {
+  .root {
+    .elementsContainer {
+      max-height: 800px;
+      overflow: visible;
+      opacity: 1;
+      transition: max-height 1s ease, opacity 2s ease 0.5s;
+
+      &.visible {
+        max-height: 800px;
+        overflow: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 870px) {
+  .root {
+    .elementsContainer {
+      max-height: 630px;
+
+      &.visible {
+        max-height: 630px;
+      }
+    }
+  }
+}
+
