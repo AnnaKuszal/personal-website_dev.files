@@ -1,0 +1,16 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding: 15px 5% 50px;
+
+  .title {
+    color: $font-dark;
+    background-color: $font-color-first;
+  }
+
+  .elementsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
