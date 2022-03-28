@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './styles/global.scss';
+
+import MainLayout from './components/layout/MainLayout/MainLayout';
+import Hero from './components/layout/Hero/Hero';
+import Homepage from './components/views/Homepage/Homepage';
+import Footer from './components/layout/Footer/Footer';
+
+
+const App = () => (
+  <MainLayout>
+    <Hero title="ANNA KUSZAL" subtitle="Frontend developer" />
+    <Homepage />
+    <Footer copy='Copyright © 2022 by Anna Kuszal.' rights='All Rights Reserved.' />
+  </MainLayout>
+);
+
 
 export default App;
