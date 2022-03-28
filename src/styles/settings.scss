@@ -1,0 +1,58 @@
+$base-size: 10px;
+
+// 'Roboto Slab', serif;
+// 'Roboto', sans-serif, "Open Sans", Helvetica, Arial;
+
+/* Fonts */
+
+$font-first: 'Roboto Serif', serif, Helvetica, Arial;
+$font-second: 'Almendra', serif, Helvetica, Arial;
+
+
+/* Colors */
+
+$bg-dark: rgb(0, 0, 0);
+$bg-color-first: rgb(255, 255, 0);
+$bg-color-second: rgb(255, 115, 0);
+$photo-bg: rgb(189, 189, 189);
+
+$font-light: rgb(255, 255, 255);
+$font-dark: rgb(0, 0, 0);
+
+$font-color-first: rgb(255, 255, 0);
+$font-color-second: rgb(255, 115, 0);
+$font-color-link-primary: rgb(0, 171, 238);
+$font-color-link: rgb(212, 15, 140);
+
+
+/* Shadows */
+$box-shadow-first: 0 0 5px 0 rgba(255, 255, 0, 0.7), 0 0 12px 0 rgba(255, 255, 0, 0.5);
+$box-shadow-second: 0 0 5px 0 rgba(255, 115, 0, 0.7), 0 0 12px 0 rgba(255, 115, 0, 0.5);
+
+$box-shadow-hero: 0 0 5px 0 rgba(255, 255, 0, 0.7), 8px 5px 12px 0 rgba(255, 255, 0, 0.5);
+
+/* Gradients */
+$linear-gradient-first: linear-gradient(to right,
+rgba(255, 255, 0, 0) 40%,
+rgba(255, 255, 0, .2) 60%,
+rgba(255, 255, 0, .5) 80%,
+rgba(255, 255, 0, 1) 100%);
+
+$linear-gradient-main: linear-gradient(to right,
+rgba(255, 255, 0, .02) 0%,
+rgba(255, 255, 0, .13) 5%,
+rgba(255, 255, 0, .35) 35%,
+rgba(255, 255, 0, .35) 65%,
+rgba(255, 255, 0, .13) 95%,
+rgba(255, 255, 0, .02) 100%);
+
+/* Mixins */
+
+@mixin hover-animation($all: false, $color-time: 0.3s, $bg-color-time: 0.3s) {
+  @if ($all) {
+    transition: all 0.3s;
+  } @else {
+    transition: color $color-time, background-color $bg-color-time;
+  }
+}
+
